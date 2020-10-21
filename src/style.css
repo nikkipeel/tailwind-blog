@@ -1,0 +1,133 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+} 
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+
+.dropdown:hover .dropdown-content  {
+  display: block;
+}
+
+
+.dropdown-content-mobile {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-mobile:hover .dropdown-content-mobile {
+  display: inline-block;
+  position:relative;
+
+}
+
+p {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+}
+
+em {
+  font-family: 'Merriweather', serif;
+}
+
+blockquote {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+}
+
+main, section, aside{
+  animation: fadein .5s ease;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main img {
+  height: 500px;
+  width: 100%;
+}
+
+button {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 700;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+
+#title {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  text-shadow:   -5px 5px #6B46C1,
+                  -8px 8px #68D391,
+                 -12px 12px #F6E05E;
+  animation: slidein .5s ease;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 200%;
+      width: 500%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+
+
+#social-links li {
+  transition: all .3s ease;
+}
+
+#social-links li:hover {
+  transform: scale(1.1);
+}
+
+#image-grid img {
+  width: 100%;
+  height: 80px;
+}
+
+#blog-cards img {
+  width: 100%;
+  height: 300px;
+}
+.show {
+  display: block;
+}

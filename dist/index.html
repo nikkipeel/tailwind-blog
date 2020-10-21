@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Merriweather:wght@300;400&family=Oxygen:wght@300;400;700&family=Satisfy&display=swap" rel="stylesheet">
+    <title>Tailwind Blog</title>
+  </head>
+  <body class="bg-indigo-100">
+
+    <!-- RESPONSIVE NAVIGATION -->
+    <header id="top" class="bg-indigo-900">
+      <div class="menu flex justify-between items-center p-2 px-2">
+        <div class="flex items-center text-indigo-100">
+          <img class="h-8 px-2"  src="#" alt="">
+          <svg class="mr-4" width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+          </svg>
+          <p class="text-xl">Title</p>
+        </div>
+      
+        <div>
+          <button type="button" id="bars" class="transition duration-300 md:hidden h-8 w-8 text-indigo-200 focus:outline-none focus:text-white hover:text-white"><i class="fas fa-bars text-xl"></i></button>
+        </div>
+
+        <div class="hidden md:flex items-center mx-auto">
+          <h1 class="text-base font-normal text-gray-100 mr-4">Subscribe For Updates!</h1>
+          <label class="sr-only"for="email">Email Address:</label>
+          <input class="text-xs p-2 w-48 mr-2 rounded focus:outline-indigo-100" type="text" id="email" name="email" placeholder="Enter your email address" required />
+       
+          <button class="transition duration-300 bg-indigo-500 hover:bg-indigo-400 font-normal hover:font-semibold text-white text-sm py-2 px-4 ml-2 rounded">Sign Up</button>
+      </div>
+
+        <div class="hidden md:flex">
+          <ul class="md:flex">
+            <li>
+          <a href="#" class="text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white cursor-pointer p-2 mr-4">Home</a></li>
+          <li class="dropdown"><a href="#" class="text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white focus:underline focus:font-normal focus:text-white py-2 w-100">Blog</a> 
+            <svg class="float-right pt-1 mr-2 text-gray-200" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+
+            <ul class="dropdown-content bg-indigo-900 text-gray-200 text-sm py-4 text-center">
+              <li class="font-light transition duration-300 hover:font-normal hover:bg-white hover:text-indigo-900 py-2 w-full"><a href="#">Business</a></li>
+              <li class="font-light transition duration-300 hover:font-normal hover:bg-white hover:text-indigo-900 py-2 w-full"><a href="#">Travel</a></li>
+              <li class="font-light transition duration-300 hover:font-normal hover:bg-white hover:text-indigo-900 py-2 w-full"><a href="#">Family</a></li>
+              <li class="font-light transition duration-300 hover:font-normal py-2 hover:bg-white hover:text-indigo-900  w-full"><a href="#">Cooking</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white p-2 mr-4">About</a></li>
+          <li><a href="#" class="text-sm tracking-wide transition duration-300 hover:tracking-tight text-gray-200 font-light hover:font-normal  hover:underline hover:text-white  p-2 mr-8">Contact</a></li>
+        </ul>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden flex px-2 pt-2 pb-4 text-center">
+        <ul class="flex flex-col justify-center ">
+        <li><a href="#" class="block text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white cursor-pointer px-2 py-1">Home</a></li>
+        <div class="dropdown-mobile">
+        <li class="flex justify-center items-end"><a href="#" class="text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white focus:underline focus:font-normal focus:text-white mt-1 px-1 ">Blog</a><svg class="text-gray-200" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg></li>
+        <ul class="dropdown-content-mobile overflow-y-visible border-gray-200 border-opacity-50 border-t-2 border-b-2 text-gray-200 text-sm  w-full mt-2">
+          <li class="font-light transition duration-300 hover:font-normal hover:bg-white hover:text-indigo-900  p-2"><a href="#">Business</a></li>
+          <li class="font-light transition duration-300 hover:font-normal hover:bg-white hover:text-indigo-900  p-2"><a href="#">Travel</a></li>
+          <li class="font-light transition duration-300 hover:font-normal hover:bg-white hover:text-indigo-900  p-2"><a href="#">Family</a></li>
+          <li class="font-light transition duration-300 hover:font-normal hover:bg-white hover:text-indigo-900 p-2"><a href="#">Cooking</a></li>
+        </ul>
+      </div>
+        <li><a href="#" class="block text-sm  text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white mt-1 px-2 py-1">About</a></li>
+        <li><a href="#" class="block text-sm  text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white  mt-1 px-2 py-1">Contact</a></li>
+      </ul>
+        <span class="bg-white h-4 w-3/4"></span>
+        <h1 class="text-base text-white pb-2 mt-8">Subscribe For Updates</h1>
+        <p class="text-xs font-light text-gray-100 mx-8 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam iure vel consectetur!</p>
+ 
+        <div class="flex justify-center items-center mx-auto"> 
+          <label class="text-xs text-gray-100 mr-2"for="email">Email Address:</label>
+          <input class="text-xs p-2 rounded focus:outline-none indigo-100" type="text" id="email" name="email" placeholder="Enter your email address" required />
+     
+          <button class="ml-2 bg-indigo-500 transition duration-300 hover:bg-indigo-400 text-white font-normal hover:font-semibold text-sm py-2 px-4 rounded">Sign Up</button>
+        </div>
+      </div>
+    </header>
+
+  <!-- TOP SECTION-->
+    <div class="flex flex-col w-1/2 justify-center items-center mx-auto mt-20 mb-8">
+      <h1 id="title" class="text-6xl text-center">Blog Title</h1>
+      <em class="lg:w-1/2 text-xs text-center mt-2 mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus magnam, dolorum commodi numquam dolorem iure!</em>
+   
+    </div>
+
+    <!-- MAIN -->
+    <main>
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <!-- RECENT POST -->
+        <section class="col-span-2 mx-12 my-12 py-4 px-8 bg-gray-100 shadow-lg">
+          <img src="https://source.unsplash.com/random/x500/?blogging" alt="" class="mx-w-100 py-4">
+          <h1 class="text-3xl">Heading One</h1>
+          <p class="text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam corrupti cum ipsum reprehenderit tenetur quam recusandae qui perferendis. Quae earum ipsam sequi, iusto quisquam accusamus, cum soluta sit sunt laboriosam laudantium non cupiditate praesentium blanditiis optio doloribus unde? Ab dolorem laborum voluptatum quas reiciendis doloremque obcaecati facere architecto dolores ea. </p>
+          <blockquote class="my-6 mx-4 p-4 text-2xl border-l-4 border-indigo-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</blockquote>
+          <p class="text-base mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam eius, officia laborum veritatis quisquam voluptas atque ut aut ipsa! Hic, deleniti asperiores harum, quas dignissimos praesentium alias deserunt unde expedita iusto quia. Odit sunt molestiae repellat similique nulla, doloremque eius rem. Similique voluptates reprehenderit aliquam enim esse excepturi reiciendis necessitatibus.</p>
+          <a class="flex items-center text-indigo-700 hover:text-indigo-500 hover:underline focus:underline transition duration-300" href="#">Read More
+            <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="24px" height="20px">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </section>
+
+      <!-- SIDEBAR -->
+        <aside class="col-span-1 mx-8 my-12 items-center">
+          <div class="mb-12 py-4 bg-white px-8 shadow-base border-2 border-indigo-200 rounded">
+            <h3 class="text-xl border-b-2 border-indigo-300 mb-4 w-3/4">About</h3>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipsicing elit. Dolorum totam corporis illum esse sapiente. Distinctio cumque accusamus mollitia. Quibusdam tempore ut ad maxime magni numquam optio voluptates debitis dignissimos corrupti? Aliquid dolorum mollitia veniam minus tenetur vel, voluptate aperiam ut voluptatum cum odit iste autem reiciendis.
+            <br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima eaque totam id iusto!</p>
+          </div>
+          <div class="py-4 px-8 bg-white shadow-base border-2 border-indigo-200  rounded">
+            <h3 class="text-xl border-b-2 border-indigo-300 mb-4 w-3/4">Instagram</h3>
+            <p class="text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ipsa! Unde culpa perferendis quae, fuga repudiandae eos ducimus harum neque minus id hic consectetur dolorum.</p>
+            <div id="image-grid" class="grid grid-cols-3 gap-4">
+              <div class="col-span-1">
+                <img src="https://source.unsplash.com/random/" alt="">
+              </div>
+              <div class="col-span-1">
+                <img src="https://source.unsplash.com/random/" alt="">
+              </div>
+              <div class="col-span-1">
+                <img src="https://source.unsplash.com/random/" alt="">
+              </div>
+              <div class="col-span-1">
+                <img src="https://source.unsplash.com/random/" alt="">
+              </div>
+              <div class="col-span-1">
+                <img src="https://source.unsplash.com/random/" alt="">
+              </div>
+              <div class="col-span-1">
+                <img src="https://source.unsplash.com/random/" alt="">
+              </div>
+              <div class="col-span-1">
+                <img src="https://source.unsplash.com/random/" alt="">
+              </div>
+              <div class="col-span-1">
+                <img src="https://source.unsplash.com/random/" alt="">
+              </div>
+              <div class="col-span-1">
+                <img src="https://source.unsplash.com/random/" alt="">
+              </div>
+            </div>
+            <button class="block bg-indigo-500 font-normal hover:font-semibold hover:bg-indigo-400 hover:underline text-white mx-auto mt-4 py-2 px-4 rounded transition duration-300">Follow @instaname</a></button>
+          </div>
+        </aside>
+
+        </div>
+      </main>
+
+      <!-- SUBSCRIBE -->
+      <div id="subscribe" class="bg-indigo-900">
+        <div class="flex flex-col justify-center items-center text-center mx-auto py-16 w-1/2 ">
+          <h1 class="text-3xl text-white pb-2">Subscribe For Updates</h1>
+          <p class="text-sm font-light text-gray-100 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam iure vel consectetur. Nulla corrupti dolorum reiciendis, vitae nam blanditiis aliquid omnis atque, adipisci tempora qui perspiciatis natus dolores hic voluptatem doloremque nisi ipsa asperiores placeat?</p>
+          <div class="flex flex-wrap justify-center items-center mt-4">
+            <label class="text-sm text-gray-100 pr-2"for="email">Email Address:</label>
+            <input class="text-sm p-2 px-4 my-2 w-48 rounded focus:outline-none indigo-100" type="text" id="email" name="email" placeholder="Enter your email address" required />
+
+            <button class="bg-indigo-500 hover:bg-indigo-400 text-white py-2 px-4 ml-2 my-2 rounded transition duration-300">Sign Up</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  
+    <!-- BLOG CARDS -->
+    <div id="blog-cards" class="grid p-8 lg:grid-cols-3 md:grid-cols-2 md:gap-4">
+    <div class="max-w-sm m-2 rounded overflow-hidden shadow-lg bg-white text-gray-800">
+      <img src="https://source.unsplash.com/random/x400/?business" alt="" class="w-full" />
+      <div class="px-6 py-4">
+        <div>
+          <h1 class="text-2xl">Post Title</h1>
+          <em class="text-xs mr-4">Written by Jane Doe</em>
+          <small class="text-xs text-gray-700">July 04 2020</small>
+          <p class="text-sm pt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, sint atque praesentium similique error aperiam hic rem nulla itaque recusandae nihil facilis animi doloribus ratione asperiores vero amet et adipisci...</p>
+
+          <a class="mt-2 text-sm flex items-center text-indigo-700 hover:text-indigo-500 hover:underline focus:underline transition duration-300" href="#">Read More
+            <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20px" height="16px">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+        
+      </div>
+      <div class="px-6 py-4">
+          <span
+            class="inline-block bg-red-200 bg-opacity-75 rounded-full px-3 py-1 text-sm font-semibold text-red-800 mr-2"
+          >
+            #business
+          </span>
+          <span
+          class="inline-block bg-purple-200 bg-opacity-75 rounded-full px-3 py-1 text-sm font-semibold text-purple-800 mr-2"
+        >
+          #travel
+        </span>
+       
+      </div>
+    
+    </div>
+    <div class="max-w-sm m-2 rounded overflow-hidden shadow-lg bg-white text-gray-800">
+      <img src="https://source.unsplash.com/random/x400/?family" alt="" class="w-full" />
+      <div class="px-6 py-4">
+        <div>
+          <h1 class="text-2xl">Post Title</h1>
+          <em class="text-xs mr-4">Written by Susan Williams</em>
+          <small class="text-xs text-gray-700">July 01 2020</small>
+          <p class="text-sm pt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, sint atque praesentium similique error aperiam hic rem nulla itaque recusandae nihil facilis animi doloribus ratione asperiores vero amet et adipisci...</p>
+          <a class="mt-2 text-sm flex items-center text-indigo-700 hover:text-indigo-500 hover:underline focus:underline transition duration-300" href="#">Read More
+            <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20px" height="16px">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+        
+      </div>
+      <div class="px-6 py-4">
+          <span
+            class="inline-block bg-yellow-200 bg-opacity-75 rounded-full px-3 py-1 text-sm font-semibold text-yellow-800 mr-2"
+          >
+            #family
+          </span>
+          <span
+          class="inline-block bg-purple-200 bg-opacity-75 rounded-full px-3 py-1 text-sm font-semibold text-purple-800 mr-2"
+        >
+          #travel
+        </span>
+       
+      </div>
+    
+    </div>
+    <div class="max-w-sm m-2 rounded overflow-hidden shadow-lg bg-white text-gray-800">
+      <img src="https://source.unsplash.com/random/x400/?cooking" alt="" class="w-full" />
+      <div class="px-6 py-4">
+        <div>
+          <h1 class="text-2xl">Post Title</h1>
+          <em class="text-xs mr-4">Written by Melissa Smith</em>
+          <small class="text-xs text-gray-700">June 27th 2020</small>
+          <p class="text-sm pt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, sint atque praesentium similique error aperiam hic rem nulla itaque recusandae nihil facilis animi doloribus ratione asperiores vero amet et adipisci...</p>
+          <a class="mt-2 text-sm flex items-center text-indigo-700 hover:text-indigo-500 hover:underline focus:underline transition duration-300" href="#">Read More
+            <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20px" height="16px">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+        
+      </div>
+      <div class="px-6 py-4">
+          <span
+            class="inline-block bg-pink-200 bg-opacity-75 rounded-full px-3 py-1 text-sm font-semibold text-pink-800 mr-2"
+          >
+            #cooking
+          </span>
+          <span
+          class="inline-block bg-green-200 bg-opacity-75 rounded-full px-3 py-1 text-sm font-semibold text-green-800 mr-2"
+        >
+          #gardening
+        </span>
+       
+      </div>
+    
+    </div>
+  </div>
+
+    <!-- FOOTER -->
+    <footer class="lg:flex lg:justify-between  bg-indigo-800 text-indigo-100 p-6">
+    
+      <div class="mx-w-sm lg:text-left lg:w-1/3 ml-4 mt-4 ">
+        <div class="text-center justify-center items-center mt-4">
+          <div class="flex flex-row justify-center lg:text-left leading-none">
+            <svg  width="28px" height="28px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+            </svg>
+          <h1 class="text-xl text-white mb-4 ml-2"> Subscribe For Updates</h1>
+        </div>
+          <p class="text-xs md:text-left font-light text-gray-100 mb-6">Lorem ipsum dolor voluptatem doloremque nisi ipsa asperiores placeat?</p>
+        
+            <label class="text-sm text-gray-100 "for="email">Email Address:</label>
+            <input class="text-xs p-2 px-4 my-2 rounded focus:outline-none indigo-100 w-60%" type="text" id="email" name="email" placeholder="Enter your email address" required />
+
+            <button class="mt-2 mx-6 w-3/4 bg-indigo-500 hover:bg-indigo-400 text-white w-100 py-2 px-4 rounded transition duration-300">Sign Up</button>
+
+          </div>
+      
+      </div>
+     
+<div class="mx-w-sm text-center flex flex-col mt-8 mb-4 mx-12 justify-center lg:w-1/3">
+    <strong class="text-base leading-loose mx-auto mb-4 text-indigo-100 border-indigo-200 border-opacity-75 border-b-2 w-1/2">Archives</strong>
+    <div class="flex flex-row justify-center">
+      <ul class="text-sm font-light py-2 px-2">
+        <li class="pb-2 cursor:pointer hover:text-white hover:underline transition duration-300"><a href="#">October 2020</a></li>
+        <li class="pb-2 cursor:pointer hover:text-white hover:underline transition duration-300"><a href="#">September 2020</a></li>
+        <li class="pb-2 cursor:pointer hover:text-white hover:underline transition duration-300"><a href="#">August 2020</a></li>
+        <li class="pb-2 cursor:pointer hover:text-white hover:underline transition duration-300"><a href="#">July 2020</a></li>
+      </ul>
+
+      <ul class="text-sm font-light px-2 py-2">
+        <li class="pb-2 cursor:pointer hover:text-white hover:underline transition duration-300"><a href="#">June 2020</a></li>
+        <li class="pb-2 cursor:pointer hover:text-white hover:underline transition duration-300"><a href="#">May 2020</a></li>
+        <li class="pb-2 cursor:pointer hover:text-white hover:underline transition duration-300"><a href="#">April 2020</a></li>
+        <li class="pb-2 cursor:pointer hover:text-white hover:underline transition duration-300"><a href="#">March 2020</a></li>
+      </ul>
+    </div>
+    </div>
+      <div class="mx-w-sm text-center mt-8 mb-4 mx-12 lg:flex lg:flex-col justify-center lg:text-right lg:w-1/3">
+        <h1 class="text-xl font-bold">Title</h1>
+        <em class="text-xs font-light pb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem!</em>
+        <p class="text-xs mt-2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dignissimos, nostrum dicta dolore recusandae odio.</p>
+        <ul id="social-links" class="flex flex-row text-xl justify-center lg:justify-end mt-6">
+          <li class="px-2 cursor:pointer hover:text-white transition duration-300"><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li class="px-2 cursor:pointer hover:text-white transition duration-300"><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li class="px-2 cursor:pointer hover:text-white transition duration-300"><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="px-2 cursor:pointer hover:text-white transition duration-300"><a href="#"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </div>
+
+      
+  <!-- NAVIGATE TO TOP -->
+  <div class="lg:relative lg:w-32 justify-center text-center text-gray-100 mt-12 mb-8 mx-auto">
+    <svg class="mx-auto" width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+    <a class="text-base font-normal hover:font-semibold mb-4 transition duration-300 " href="#top"> 
+ 
+Back To Top</a
+></div>
+
+    </footer>
+    <script>
+        let bars = document.getElementById('bars');
+
+        let mobileMenu = document.getElementById('mobileMenu');
+
+        bars.addEventListener('click', function(){
+           mobileMenu.classList.toggle('show');
+        });
+    </script>
+  </body>
+</html>

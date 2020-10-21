@@ -1,0 +1,15 @@
+{
+  "name": "tailwind-blog",
+  "version": "1.0.0",
+  "description": "Blog template built with Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwind build src/style.css -o dist/main.css"
+  },
+  "author": "Nikki Peel",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "tailwindcss": "^1.9.4"
+  }
+}
