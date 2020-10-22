@@ -2,14 +2,17 @@
   "name": "tailwind-blog",
   "version": "1.0.0",
   "description": "Blog template built with Tailwind CSS",
+  "homepage": "https://nikkipeel.github.io/tailwind-blog",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwind build src/style.css -o dist/main.css"
+    "build:css": "tailwind build src/style.css -o dist/main.css",
+    "publish": "gh-pages -d dist"
   },
   "author": "Nikki Peel",
   "license": "ISC",
   "keywords": [],
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "tailwindcss": "^1.9.4"
   }
 }

@@ -23,26 +23,30 @@
         </div>
       
         <div>
-          <button type="button" id="bars" class="transition duration-300 md:hidden h-8 w-8 text-indigo-200 focus:outline-none focus:text-white hover:text-white"><i class="fas fa-bars text-xl"></i></button>
+          <button aria-label="navigation" type="button" id="bars" class="transition duration-300 md:hidden h-8 w-8 text-indigo-200 focus:outline-none focus:text-white hover:text-white"><i class="fas fa-bars text-xl"></i></button>
         </div>
 
         <div class="hidden md:flex items-center mx-auto">
           <h1 class="text-base font-normal text-gray-100 mr-4">Subscribe For Updates!</h1>
-          <label class="sr-only"for="email">Email Address:</label>
-          <input class="text-xs p-2 w-48 mr-2 rounded focus:outline-indigo-100" type="text" id="email" name="email" placeholder="Enter your email address" required />
+          <label class="sr-only" for="email">Email Address:</label>
+          <input class="text-xs p-2 w-48 mr-2 rounded focus:outline-indigo-200 text-indigo-800" type="text"  aria-label="email"  name="email" placeholder="Enter your email address" required />
        
-          <button class="transition duration-300 bg-indigo-500 hover:bg-indigo-400 font-normal hover:font-semibold text-white text-sm py-2 px-4 ml-2 rounded">Sign Up</button>
+          <button class="transition duration-300 bg-indigo-600 hover:bg-indigo-500 font-light hover:font-normal text-white text-sm py-2 px-4 ml-2 rounded">Sign Up</button>
       </div>
 
         <div class="hidden md:flex">
           <ul class="md:flex">
             <li>
-          <a href="#" class="text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white cursor-pointer p-2 mr-4">Home</a></li>
-          <li class="dropdown"><a href="#" class="text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white focus:underline focus:font-normal focus:text-white py-2 w-100">Blog</a> 
-            <svg class="float-right pt-1 mr-2 text-gray-200" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-
+            <a href="#" class="text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white cursor-pointer p-2 mr-4">Home</a></li>
+            <li class="dropdown">
+           
+              <a href="#" class="text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white focus:underline focus:font-normal focus:text-white py-2 w-100">Blog
+                <svg class="float-right pt-1 mr-2 text-gray-200" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a> 
+            
+            
             <ul class="dropdown-content bg-indigo-900 text-gray-200 text-sm py-4 text-center">
               <li class="font-light transition duration-300 hover:font-normal hover:bg-white hover:text-indigo-900 py-2 w-full"><a href="#">Business</a></li>
               <li class="font-light transition duration-300 hover:font-normal hover:bg-white hover:text-indigo-900 py-2 w-full"><a href="#">Travel</a></li>
@@ -50,6 +54,7 @@
               <li class="font-light transition duration-300 hover:font-normal py-2 hover:bg-white hover:text-indigo-900  w-full"><a href="#">Cooking</a></li>
             </ul>
           </li>
+
           <li><a href="#" class="text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white p-2 mr-4">About</a></li>
           <li><a href="#" class="text-sm tracking-wide transition duration-300 hover:tracking-tight text-gray-200 font-light hover:font-normal  hover:underline hover:text-white  p-2 mr-8">Contact</a></li>
         </ul>
@@ -57,12 +62,12 @@
       </div>
 
       <div id="mobileMenu" class="hidden flex px-2 pt-2 pb-4 text-center">
-        <ul class="flex flex-col justify-center ">
+        <ul class="flex flex-col justify-center">
         <li><a href="#" class="block text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white cursor-pointer px-2 py-1">Home</a></li>
         <div class="dropdown-mobile">
-        <li class="flex justify-center items-end"><a href="#" class="text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white focus:underline focus:font-normal focus:text-white mt-1 px-1 ">Blog</a><svg class="text-gray-200" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <a href="#" class="flex justify-center flex-end text-sm text-gray-200 font-light transition duration-300 hover:font-normal hover:underline hover:text-white focus:underline focus:font-normal focus:text-white mt-1 px-1">Blog<svg class="float-right pt-1 mr-2" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-        </svg></li>
+        </svg></a>
         <ul class="dropdown-content-mobile overflow-y-visible border-gray-200 border-opacity-50 border-t-2 border-b-2 text-gray-200 text-sm  w-full mt-2">
           <li class="font-light transition duration-300 hover:font-normal hover:bg-white hover:text-indigo-900  p-2"><a href="#">Business</a></li>
           <li class="font-light transition duration-300 hover:font-normal hover:bg-white hover:text-indigo-900  p-2"><a href="#">Travel</a></li>
@@ -79,7 +84,7 @@
  
         <div class="flex justify-center items-center mx-auto"> 
           <label class="text-xs text-gray-100 mr-2"for="email">Email Address:</label>
-          <input class="text-xs p-2 rounded focus:outline-none indigo-100" type="text" id="email" name="email" placeholder="Enter your email address" required />
+          <input class="text-xs p-2 rounded focus:outline-indigo-100 text-indigo-800" type="text" id="email" name="email" placeholder="Enter your email address" required />
      
           <button class="ml-2 bg-indigo-500 transition duration-300 hover:bg-indigo-400 text-white font-normal hover:font-semibold text-sm py-2 px-4 rounded">Sign Up</button>
         </div>
@@ -150,7 +155,7 @@
                 <img src="https://source.unsplash.com/random/" alt="">
               </div>
             </div>
-            <button class="block bg-indigo-500 font-normal hover:font-semibold hover:bg-indigo-400 hover:underline text-white mx-auto mt-4 py-2 px-4 rounded transition duration-300">Follow @instaname</a></button>
+            <button class="block bg-indigo-600 font-light hover:font-normal hover:bg-indigo-500 hover:underline text-white mx-auto mt-4 py-2 px-4 rounded transition duration-300">Follow @instaname</a></button>
           </div>
         </aside>
 
@@ -163,10 +168,10 @@
           <h1 class="text-3xl text-white pb-2">Subscribe For Updates</h1>
           <p class="text-sm font-light text-gray-100 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam iure vel consectetur. Nulla corrupti dolorum reiciendis, vitae nam blanditiis aliquid omnis atque, adipisci tempora qui perspiciatis natus dolores hic voluptatem doloremque nisi ipsa asperiores placeat?</p>
           <div class="flex flex-wrap justify-center items-center mt-4">
-            <label class="text-sm text-gray-100 pr-2"for="email">Email Address:</label>
-            <input class="text-sm p-2 px-4 my-2 w-48 rounded focus:outline-none indigo-100" type="text" id="email" name="email" placeholder="Enter your email address" required />
+            <label class="text-sm text-gray-100 pr-2">Email Address:</label>
+            <input class="text-sm p-2 px-4 my-2 w-48 rounded focus:outline-indigo-200 text-indigo-800" type="text" aria-label="email"  name="email" placeholder="Enter your email address" required />
 
-            <button class="bg-indigo-500 hover:bg-indigo-400 text-white py-2 px-4 ml-2 my-2 rounded transition duration-300">Sign Up</button>
+            <button class="bg-indigo-600 font-light hover:font-normal hover:bg-indigo-500 text-white py-2 px-4 ml-2 my-2 rounded transition duration-300">Sign Up</button>
         </div>
       </div>
       </div>
@@ -283,10 +288,10 @@
         </div>
           <p class="text-xs md:text-left font-light text-gray-100 mb-6">Lorem ipsum dolor voluptatem doloremque nisi ipsa asperiores placeat?</p>
         
-            <label class="text-sm text-gray-100 "for="email">Email Address:</label>
-            <input class="text-xs p-2 px-4 my-2 rounded focus:outline-none indigo-100 w-60%" type="text" id="email" name="email" placeholder="Enter your email address" required />
+            <label class="text-sm text-gray-100">Email Address:</label>
+            <input class="text-xs p-2 px-4 my-2 rounded focus:outline-indigo-200 text-indigo-800 w-60%" type="text" name="email" aria-label="email" placeholder="Enter your email address" required />
 
-            <button class="mt-2 mx-6 w-3/4 bg-indigo-500 hover:bg-indigo-400 text-white w-100 py-2 px-4 rounded transition duration-300">Sign Up</button>
+            <button class="mt-2 mx-6 w-3/4 bg-indigo-600 hover:bg-indigo-500 font-light hover:font-normal text-white w-100 py-2 px-4 rounded transition duration-300">Sign Up</button>
 
           </div>
       
@@ -315,10 +320,10 @@
         <em class="text-xs font-light pb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem!</em>
         <p class="text-xs mt-2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dignissimos, nostrum dicta dolore recusandae odio.</p>
         <ul id="social-links" class="flex flex-row text-xl justify-center lg:justify-end mt-6">
-          <li class="px-2 cursor:pointer hover:text-white transition duration-300"><a href="#"><i class="fab fa-facebook"></i></a></li>
-          <li class="px-2 cursor:pointer hover:text-white transition duration-300"><a href="#"><i class="fab fa-instagram"></i></a></li>
-          <li class="px-2 cursor:pointer hover:text-white transition duration-300"><a href="#"><i class="fab fa-twitter"></i></a></li>
-          <li class="px-2 cursor:pointer hover:text-white transition duration-300"><a href="#"><i class="fab fa-youtube"></i></a></li>
+          <li class="px-2 cursor:pointer hover:text-white transition duration-300"><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+          <li class="px-2 cursor:pointer hover:text-white transition duration-300"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li class="px-2 cursor:pointer hover:text-white transition duration-300"><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li class="px-2 cursor:pointer hover:text-white transition duration-300"><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
         </ul>
       </div>
 
